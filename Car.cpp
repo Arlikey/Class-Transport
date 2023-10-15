@@ -2,6 +2,15 @@
 
 Car::Car(string fuelType, double fuelAmount, double tankVolume) : Transport(fuelType, fuelAmount, tankVolume) {};
 
+void Car::SetFuelType() {
+	cout << "Enter fuel type: ";
+	cin >> fuelType;
+}
+
+string Car::GetFuelType() {
+	return fuelType;
+}
+
 void Car::SetFuelAmount() {
 	cout << "Enter fuel amount: ";
 	cin >> fuelAmount;
@@ -28,4 +37,10 @@ double Car::FuelConsumption(double distance) {
 double Car::Refuel() {
 	cout << "Refuel time: " << (tankVolume - fuelAmount) / 100 << " minutes" << endl;
 	return tankVolume - fuelAmount * 1.5;
+}
+
+void Car::Print() const {
+	cout << "Fuel type: " << fuelType << endl;
+	cout << "Fuel amount: " << fuelAmount << endl;
+	cout << "Tank volume: " << tankVolume << endl;
 }

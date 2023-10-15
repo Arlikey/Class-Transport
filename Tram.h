@@ -7,6 +7,15 @@ public:
 	Tram() = default;
 	Tram(string fuelType, bool isPowered);
 
+	void SetFuelType();
+	string GetFuelType();
+
+	void SetFuelAmount();
+	void SetTankVolume();
+
+	double GetFuelAmount();
+	double GetTankVolume();
+
 	double FuelConsumption(double distance);
 
 	double Refuel();

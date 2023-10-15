@@ -13,21 +13,21 @@ public:
 	Transport() = default;
 	Transport(string fuelType, double fuelAmount, double tankVolume);
 	
-	void SetFuelType();
-	string GetFuelType();
+	virtual void SetFuelType() = 0;
+	virtual string GetFuelType() = 0;
 
-	void SetFuelAmount();
+	virtual void SetFuelAmount() = 0;
 
-	void SetTankVolume();
+	virtual void SetTankVolume() = 0;
 
-	double GetFuelAmount();
+	virtual double GetFuelAmount() = 0;
 
-	double GetTankVolume();
+	virtual double GetTankVolume() = 0;
 
-	virtual void Print() const;
+	virtual void Print() const = 0;
 
-	virtual double FuelConsumption(double distance);
+	virtual double FuelConsumption(double distance) = 0;
 
-	virtual double Refuel();
+	virtual double Refuel() = 0;
 };
 

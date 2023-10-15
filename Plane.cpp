@@ -5,6 +5,15 @@ Plane::Plane(string fuelType, double fuelAmount, double tankVolume) : Transport(
 	this->tankVolume = tankVolume;
 };
 
+void Plane::SetFuelType() {
+	cout << "Enter fuel type: ";
+	cin >> fuelType;
+}
+
+string Plane::GetFuelType() {
+	return fuelType;
+}
+
 void Plane::SetFuelAmount() {
 	cout << "Enter fuel amount: ";
 	cin >> fuelAmount;
@@ -31,4 +40,10 @@ double Plane::FuelConsumption(double distance) {
 double Plane::Refuel() {
 	cout << "Refuel time: " << (tankVolume - fuelAmount) / 200 << " minutes" << endl;
 	return tankVolume - fuelAmount * 3;
+}
+
+void Plane::Print() const {
+	cout << "Fuel type: " << fuelType << endl;
+	cout << "Fuel amount: " << fuelAmount << endl;
+	cout << "Tank volume: " << tankVolume << endl;
 }

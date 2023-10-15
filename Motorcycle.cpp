@@ -5,6 +5,15 @@ Motorcycle::Motorcycle(string fuelType, double fuelAmount, double tankVolume) : 
 	this->tankVolume = tankVolume;
 };
 
+void Motorcycle::SetFuelType() {
+	cout << "Enter fuel type: ";
+	cin >> fuelType;
+}
+
+string Motorcycle::GetFuelType() {
+	return fuelType;
+}
+
 void Motorcycle::SetFuelAmount() {
 	cout << "Enter fuel amount: ";
 	cin >> fuelAmount;
@@ -31,4 +40,10 @@ double Motorcycle::FuelConsumption(double distance) {
 double Motorcycle::Refuel() {
 	cout << "Refuel time: " << (tankVolume - fuelAmount) / 100 << " minutes" << endl;
 	return tankVolume - fuelAmount;
+}
+
+void Motorcycle::Print() const {
+	cout << "Fuel type: " << fuelType << endl;
+	cout << "Fuel amount: " << fuelAmount << endl;
+	cout << "Tank volume: " << tankVolume << endl;
 }

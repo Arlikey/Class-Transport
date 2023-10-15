@@ -5,6 +5,33 @@ Tram::Tram(string fuelType, bool isPowered) {
 	this->isPowered = isPowered;
 };
 
+void Tram::SetFuelType() {
+	cout << "Enter fuel type: ";
+	cin >> fuelType;
+}
+
+string Tram::GetFuelType() {
+	return fuelType;
+}
+
+void Tram::SetFuelAmount() {
+	cout << "Enter fuel amount: ";
+	cin >> fuelAmount;
+}
+
+void Tram::SetTankVolume() {
+	cout << "Enter tank volume: ";
+	cin >> tankVolume;
+}
+
+double Tram::GetFuelAmount() {
+	return fuelAmount;
+}
+
+double Tram::GetTankVolume() {
+	return tankVolume;
+}
+
 double Tram::FuelConsumption(double distance) {
 	cout << "Energy consumption: " << distance / 100 * 3.2 << endl;
 	return 3.2 * distance;
@@ -26,3 +53,4 @@ double Tram::Refuel() {
 		return 0;
 	}
 }
+

@@ -18,6 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Motorcycle.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Tram.cpp" />
+    <ClCompile Include="Transport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="Motorcycle.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="Tram.h" />
+    <ClInclude Include="Transport.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,23 +143,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Car.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Motorcycle.cpp" />
-    <ClCompile Include="Plane.cpp" />
-    <ClCompile Include="Ship.cpp" />
-    <ClCompile Include="Tram.cpp" />
-    <ClCompile Include="Transport.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Car.h" />
-    <ClInclude Include="Motorcycle.h" />
-    <ClInclude Include="Plane.h" />
-    <ClInclude Include="Ship.h" />
-    <ClInclude Include="Tram.h" />
-    <ClInclude Include="Transport.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
